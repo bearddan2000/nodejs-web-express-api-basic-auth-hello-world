@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:  
+  api:
+    image: node:latest
+    volumes:
+      - ./api/bin:/app
+    command: /bin/sh -c "cd /app && npm install && node /app/server.js"
+    ports:
+      - 80:8000
